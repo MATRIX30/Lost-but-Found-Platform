@@ -1,0 +1,981 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#"
+     xml:base="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:uni="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#IsNumberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#IsNumberOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasNumber"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Numero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+        <rdfs:comment xml:lang="fr">Addresse du propiètaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasCreationDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_expiration"/>
+        <rdfs:comment xml:lang="fr">donne la date de creation d&apos;un objet</rdfs:comment>
+        <rdfs:label xml:lang="fr">hasCreationDate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasDateOfBirth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasDateOfBirth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_de_naissance"/>
+        <rdfs:comment xml:lang="fr">Donne le jour de naissance present sur un document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasFatherName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasFatherName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pere"/>
+        <rdfs:comment xml:lang="fr">donne le nom de la père du propriètaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasFirstName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasFirstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Noms"/>
+        <rdfs:comment xml:lang="fr">donne le Prenom  du propriètaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasId -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#ID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasIdentificationPost -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasIdentificationPost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Poste_indentification"/>
+        <rdfs:comment xml:lang="fr">Donne le lieu d&apos;identification d&apos;un document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasImage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasImage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#image"/>
+        <rdfs:comment xml:lang="fr">image du propriétaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasLastName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasLastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Prenoms"/>
+        <rdfs:comment xml:lang="fr">donne le nom  du propriètaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasMotherName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasMotherName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mere"/>
+        <rdfs:comment xml:lang="fr">donne le nom de la mère du propriètaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Numero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasPlaceOfBirth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasPlaceOfBirth">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Lieu_de_naissance"/>
+        <rdfs:comment xml:lang="fr">Donne le lieu de naissance sur un document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasProffesion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasProffesion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession"/>
+        <rdfs:comment xml:lang="fr">donne la proffession du propiriétaire du document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasSexe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasSexe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Sexe"/>
+        <rdfs:comment xml:lang="fr">donne le sexe present sur un document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasSignature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasSignature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Signature"/>
+        <rdfs:comment xml:lang="fr">image de la signature sur un document</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Nom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Acte_de_naissance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Type"/>
+        <rdfs:comment xml:lang="fr">Un acte de naissance est un document juridique authentique attestant de la naissance d&apos;une personnalité juridique.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Acte_de_naisssance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Adresse</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indication du nom et du domicile d&apos;une personne le plus souvent le nom de son quartier de residense.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Type"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#hasNumber"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Numero"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">La carte nationale d&apos;identité est un document officiel d’identification. Elle est  obligatoire. Elle est délivrée, généralement dans un poste d&apos;identification.</rdfs:comment>
+        <rdfs:label xml:lang="fr">CNI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_de_naissance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_de_naissance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">La date de naissance d&apos;une personne est la date à laquelle elle est née et qui figure sur sa piece personnelle.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Date_de_naissance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_expiration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_expiration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">La durée de validité de la carte d&apos;identité du passeport ou toute autres pièce d&apos;une personne majeure évalué le plus souvant en année 10 ans pour la CNI(carte nationnal d&apos;identité) et 5 ans pour le passeport</rdfs:comment>
+        <rdfs:label xml:lang="fr">Date creation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Feminin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Feminin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Sexe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#ID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#ID">
+        <rdfs:comment xml:lang="fr">ID</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Répresente le numero d&apos;un document personnel qui est son identifiant unique.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations">
+        <rdfs:comment xml:lang="fr">Classe qui represente l&apos;ensemble des informations qu&apos;on peut trouver sur un document.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Iformations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Lieu_de_naissance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Lieu_de_naissance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Le lieu de naissance d&apos;une personne désigne de façon plus ou moins précise le lieu géographique où cette dernière est née.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Lieu_de_naissance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Sexe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Mot ou groupe de mots servant à désigner une personne individuel ici il s&apos;agit du nom de femme ayant donné naissance a la personne.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Nom mere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Noms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Noms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Mot ou groupe de mots servant à désigner un objet individuel.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Noms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Numero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Numero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Il s&apos;agit du numero d&apos;identifiant unique d&apos;une piece personnelle</rdfs:comment>
+        <rdfs:label xml:lang="fr">Numero</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Type"/>
+        <rdfs:comment xml:lang="fr">Toute autre piece qui que perdre une personne</rdfs:comment>
+        <rdfs:label xml:lang="fr">Other</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Type"/>
+        <rdfs:comment xml:lang="fr">Le passeport est un document officiel qui permet à tout citoyen de justifier de son identité et de sa nationalité et de voyager à l&apos;étranger.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Passeport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Mot ou groupe de mots servant à désigner une personne individuel ici il s&apos;agit du nom geniteur de l&apos;individu.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Poste_indentification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Poste_indentification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Designe le lieu de délivrance d&apos;un document</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Poste_indentification</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Prenoms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Prenoms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Le prénom est un nom personnel utilisé pour désigner une personne de façon unique. Il peut être unique ou multiple. Le prénom peut être suivi du patronyme ou du nom de famille, qui sont hérités et partagés dans une famille</rdfs:comment>
+        <rdfs:label xml:lang="fr">Prenoms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">La profession, du latin professio traduit comme la « déclaration, déclaration publique, action de se donner comme », est l&apos;activité exercée par une personne dans un domaine. Cette activité procure un salaire, une rémunération, des revenus à celui qui l&apos;exerce.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Profession</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Sexe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Sexe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Le mot sexe désigne souvent le système reproducteur d&apos;une personne, ici se réfère aussi aux différences physiologiques distinguant les hommes et les femmes.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Sexe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Signature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Signature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Image d&apos;une inscription qu&apos;une personne fait de son nom (sous une forme particulière et constante) en vue de certifier exact ou authentique, ou d&apos;engager sa responsabilité.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Signature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Grandeur donnant la la longueur d&apos;un individu</rdfs:comment>
+        <rdfs:label xml:lang="fr">Taille</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Telephone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Telephone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Un numéro de téléphone est une suite de chiffres ou parfois de lettres (selon les pays), qui identifie de façon unique un terminal au sein d&apos;un réseau téléphonique, et qu&apos;un appelant doit composer sur son clavier pour pouvoir le joindre.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Telephone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+        <rdfs:comment xml:lang="fr">Cette attribut permet de savoir de quel type est un document</rdfs:comment>
+        <rdfs:label xml:lang="fr">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Informations"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#AUBIANG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#AUBIANG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Noms"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Agriculteur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Agriculteur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Aubiang_Gustave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Aubiang_Gustave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pere"/>
+        <rdfs:label>AUBIANG GUSTAVE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Avocat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Avocat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bac_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bac_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Baganté -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Baganté">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bamenda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bamenda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bertoua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bertoua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Poste_indentification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Poste_indentification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+        <hasAddress rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Yaoundé"/>
+        <hasDateOfBirth rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#11.02.1994"/>
+        <hasFatherName rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Aubiang_Gustave"/>
+        <hasFirstName rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#AUBIANG"/>
+        <hasLastName rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Xavier"/>
+        <hasMotherName rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Meyongue_Anastasie"/>
+        <hasNumber rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#0006789"/>
+        <hasProffesion rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Enseignant"/>
+        <hasSexe rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin"/>
+        <hasSize rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.80"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Douala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Douala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Edéa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Edéa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Enseignant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Enseignant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Footballeur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Footballeur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Féminin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Féminin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Feminin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Kumba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Kumba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Licence_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Licence_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mamfé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mamfé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Maroua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Maroua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mbengwie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mbengwie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Menusier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Menusier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Profession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Meyongue_Anastasie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Meyongue_Anastasie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mere"/>
+        <rdfs:label>MEYONGUE ANASTASIE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Ngaoundéré -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Ngaoundéré">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+        <hasFirstName rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#AUBIANG"/>
+        <hasLastName rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Xavier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passeport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Permis_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Permis_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pouma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pouma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Xavier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Xavier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Prenoms"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Yaoundé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Yaoundé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Adresse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#000A_23072021 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#000A_23072021">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#0006789 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#0006789">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Numero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.68 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.68">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.71 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.71">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.76 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.76">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.89 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.89">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.95 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.95">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#11.02.1994 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#11.02.1994">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Date_de_naissance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#AUBIANG"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Agriculteur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Aubiang_Gustave"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Avocat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bac_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Baganté"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bamenda"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bertoua"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE17"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE18"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Douala"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Edéa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Enseignant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Footballeur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Féminin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Kumba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Licence_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mamfé"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Maroua"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mbengwie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Menusier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Meyongue_Anastasie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Ngaoundéré"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Permis_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pouma"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Xavier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Yaoundé"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#000A_23072021"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#0006789"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.68"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.70"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.71"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.76"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.80"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.89"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#1.95"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#11.02.1994"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#AUBIANG"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Agriculteur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Aubiang_Gustave"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Avocat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Baganté"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bamenda"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Bertoua"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE17"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CE18"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#CNI_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Douala"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Edéa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Enseignant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Footballeur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Féminin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Kumba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mamfé"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Maroua"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Masculin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Mbengwie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Menusier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Meyongue_Anastasie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Ngaoundéré"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Passport_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Pouma"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Xavier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#Yaoundé"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nico/ontologies/2021/6/lost-object#11.02.1994"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
